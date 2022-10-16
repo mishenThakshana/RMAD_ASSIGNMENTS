@@ -33,6 +33,29 @@ const Assignment = () => {
     }
   };
 
+  //Switch Case
+  switch (true) {
+    case marks >= 75:
+      console.log('A');
+      break;
+
+    case marks >= 65:
+      console.log('B');
+      break;
+
+    case marks >= 55:
+      console.log('C');
+      break;
+
+    case marks >= 35:
+      console.log('S');
+      break;
+
+    default:
+      console.log('W');
+      break;
+  }
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Lesson 01</Text>
