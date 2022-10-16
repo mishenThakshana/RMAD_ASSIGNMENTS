@@ -8,7 +8,7 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-const listData = [
+let listData = [
   {
     id: 1,
     title: 'Banana',
@@ -29,8 +29,13 @@ const listData = [
 
 const FlatListComponent = () => {
   const [clickedItem, setClickedItem] = useState('');
+
   const handleClickedItem = id => {
     setClickedItem(id);
+    let foundData = listData.find(data => data.id === id);
+    let indexOfData = listData.indexOf(foundData);
+    listData.splice(indexOfData, 1);
+    listData = [...listData];
   };
 
   const FruitItem = ({item}) => (
