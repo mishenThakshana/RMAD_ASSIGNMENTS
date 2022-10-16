@@ -56,6 +56,17 @@ const Assignment = () => {
       break;
   }
 
+  //Ternary operator
+  marks >= 75
+    ? console.log('A')
+    : marks >= 65
+    ? console.log('B')
+    : marks >= 55
+    ? console.log('C')
+    : marks >= 35
+    ? console.log('S')
+    : console.log('W');
+
   return (
     <SafeAreaView style={styles.container}>
       <Text style={styles.title}>Lesson 01</Text>
