@@ -1,8 +1,12 @@
-import {View, Text} from 'react-native';
-import FlatListComponent from './src/FlatList';
+import {NavigationContainer} from '@react-navigation/native';
+import MainNavigator from './src/navigations/MainNavigator';
 
 const App = () => {
-  return <FlatListComponent />;
+  return (
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
+  );
 };
 
 export default App;

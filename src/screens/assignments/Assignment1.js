@@ -1,6 +1,8 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, Text, StatusBar} from 'react-native';
 
+const marks = 75;
+
 const Assignment = () => {
   React.useEffect(() => {
     functionOne();
@@ -18,7 +20,6 @@ const Assignment = () => {
     }
 
     //My Answer
-    const marks = 75;
 
     if (marks >= 75) {
       console.log('A');
