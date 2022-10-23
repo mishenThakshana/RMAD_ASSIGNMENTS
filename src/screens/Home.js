@@ -1,6 +1,5 @@
 import {SafeAreaView} from 'react-native';
-import RouteBtn from 'src/components/RouteBtn';
-import ScreenTitle from 'src/components/ScreenTitle';
+import {RouteBtn, ScreenTitle} from 'src/components';
 import routes from 'src/constants/routes';
 
 const Home = ({navigation}) => {
@@ -15,6 +14,10 @@ const Home = ({navigation}) => {
       <RouteBtn
         handler={() => navigation.navigate(routes.FLATLIST_ASSIGNMENT)}
         label="FlatList Assignment"
+      />
+      <RouteBtn
+        handler={() => navigation.navigate(routes.SCREEN_1)}
+        label="Stack Nav Assignment"
       />
     </SafeAreaView>
   );

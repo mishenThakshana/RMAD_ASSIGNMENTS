@@ -1,6 +1,6 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import {TransitionPresets} from '@react-navigation/stack';
-import {Home, Assignment1, FlatList} from 'src/screens';
+import {Home, Assignment1, FlatList, Screen1, Screen2} from 'src/screens';
 import routes from 'src/constants/routes';
 
 const Stack = createStackNavigator();
@@ -24,8 +24,13 @@ const MainNavigator = () => {
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name={routes.FLATLIST_ASSIGNMENT}
-        component={FlatList}
+        name={routes.SCREEN_1}
+        component={Screen1}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name={routes.SCREEN_2}
+        component={Screen2}
         options={{headerShown: false}}
       />
     </Stack.Navigator>
