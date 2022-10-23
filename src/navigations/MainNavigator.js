@@ -1,12 +1,18 @@
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createStackNavigator} from '@react-navigation/stack';
+import {TransitionPresets} from '@react-navigation/stack';
 import {Home, Assignment1, FlatList} from 'src/screens';
 import routes from 'src/constants/routes';
 
-const Stack = createNativeStackNavigator();
+const Stack = createStackNavigator();
 
 const MainNavigator = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        ...TransitionPresets.SlideFromRightIOS,
+        headerShown: false,
+        headerLeft: null,
+      }}>
       <Stack.Screen
         name={routes.HOME}
         component={Home}
